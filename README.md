@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed:
 
 4. Start the server\
 `node server`\
-The server should start on the port 3000.
+The server should start on the port 5000.
 
 **Database**\
 The project is already set up with a link to the MongoDB database, so you don't need to worry about database connectivity. You can start using the database right away without needing to import the sample data manually.
