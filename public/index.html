@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+</head>
+<body>
+  <h2>Signup</h2>
+  <form id="signupForm">
+    <label for="signupUsername">Username:</label>
+    <input type="text" id="signupUsername" name="username" required>
+    <br>
+    <label for="signupPassword">Password:</label>
+    <input type="password" id="signupPassword" name="password" required>
+    <br>
+    <button type="submit">Signup</button>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const username = document.getElementById('signupUsername').value;
+      const password = document.getElementById('signupPassword').value;
+
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('username', username); // Store username
+        window.location.href = '/chat';
+      } else {
+        alert('Signup failed');
+      }
+    });
+  </script>
+</body>
+</html>
