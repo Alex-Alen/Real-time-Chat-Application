@@ -1,3 +1,5 @@
+![Capture](https://github.com/user-attachments/assets/10ced279-7764-496a-9f60-9141f33bdaf1)
+
 **Setup Instructions**\
 Before you begin, ensure you have the following installed:
 - Node.js
@@ -6,8 +8,8 @@ Before you begin, ensure you have the following installed:
 **Installation**
 
 1. Clone the repository\
-`git clone https://github.com/Alex-Alen/User-Authentication-System.git`\
-`cd User-Authentication-System`
+`git clone https://github.com/Alex-Alen/Real-time-Chat-Application.git`\
+`cd Real-time-Chat-Application`
 
 2. Install dependencies\
 `npm install`
